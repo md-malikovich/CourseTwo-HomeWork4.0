@@ -14,9 +14,9 @@ public class Stock {
         this.goods = goods;
     }
 
-    public int countGoods() {
+    public void countGoods() {
         setGoods(getGoods() + 1);
-        return goods;
+        //return goods;
     }
 }
 //4) Создать класс Склад. Внутри него есть переменная счётчика. Счётчик считает количество товаров на складе.

@@ -6,8 +6,9 @@ public class Manufacturer extends Thread {
         this.stock = stock;
     }
 
-    public int increaseGoods() {
-        return stock.getGoods() + 1;
+    public void increaseGoods() {
+        stock.setGoods(stock.getGoods()+ 1);
+        //return stock.getGoods() + 1;
     }
 
     public void setStock(Stock stock) {
@@ -19,7 +20,7 @@ public class Manufacturer extends Thread {
         synchronized (stock) {
             for (int i = 0; i < 5; i++)
                 increaseGoods();
-            System.out.println(getName() + " " + stock.countGoods());
+            System.out.println(getName() + " " + stock.getGoods());
         }
     }
 }
