@@ -2,15 +2,14 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Stock stock = new Stock(1);
+        Stock stock = new Stock(0);
         stock.countGoods();
 
-        stock.setGoods(1);
-        Manufacturer manufacturer = new Manufacturer();
-        Consumer consumer = new Consumer();
+        Manufacturer manufacturer = new Manufacturer(stock);
+        Consumer consumer = new Consumer(stock);
 
         manufacturer.start();
-        Thread.sleep(31000);
+        //Thread.sleep(1000);
         consumer.start();
     }
 }

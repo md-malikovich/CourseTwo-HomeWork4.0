@@ -2,6 +2,10 @@ public class Consumer extends Thread {
 
     Stock stock;
 
+    public Consumer(Stock stock) {
+        this.stock = stock;
+    }
+
     public int decreaseGoods() {
         return stock.getGoods() - 1;
     }
@@ -15,7 +19,7 @@ public class Consumer extends Thread {
         synchronized (stock) {
             for (int i = 0; i < 5; i--)
                 decreaseGoods();
-            System.out.println(getName());
+            System.out.println(getName() + " " + stock.countGoods());
         }
     }
 }
