@@ -3,14 +3,15 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 
         Stock stock = new Stock(0);
-        stock.countGoods();
+        //stock.countGoods();
 
         Manufacturer manufacturer = new Manufacturer(stock);
         Consumer consumer = new Consumer(stock);
 
-        manufacturer.start();
+        //manufacturer.start();
         //Thread.sleep(1000);
         consumer.start();
+        manufacturer.start();
     }
 }
 //4) Создать класс Склад. Внутри него есть переменная счётчика. Счётчик считает количество товаров на складе.

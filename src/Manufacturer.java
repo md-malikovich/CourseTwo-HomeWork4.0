@@ -7,7 +7,8 @@ public class Manufacturer extends Thread {
     }
 
     public void increaseGoods() {
-        stock.setGoods(stock.getGoods()+ 1);
+        stock.setGoods(stock.getGoods() + 1);
+        //stock.countGoods();
         //return stock.getGoods() + 1;
     }
 

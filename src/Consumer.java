@@ -7,7 +7,8 @@ public class Consumer extends Thread {
     }
 
     public void decreaseGoods() {
-        stock.setGoods(stock.getGoods()-1);
+        stock.setGoods(stock.getGoods() - 1);
+        //stock.countGoods();
         //return stock.getGoods() - 1;
     }
 
